@@ -1,11 +1,10 @@
-// Backend (Node.js + Express + MySQL)
-// File: backend/server.js
 const express = require('express');
-const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mysql = require('mysql2');
+const { simulateGrowth } = require('./growthSimulation');
 
+const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
@@ -13,5 +12,5 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'astro_navigator'
+  database: 'forest_ai'
 });
