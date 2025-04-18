@@ -1,0 +1,5 @@
+app.post('/simulate', (req, res) => {
+  const { parameters } = req.body; // e.g. sunlight, rainfall, soil nutrients
+  const result = simulateGrowth(parameters);
+  res.json(result);
+});
